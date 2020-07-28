@@ -13,14 +13,14 @@ print(df.shape)
 query = '''
 CREATE TABLE titanic (
     id SERIAL PRIMARY KEY,
-    Survived INT,
-    Pclass INT,
-    Name VARCHAR(100),
-    Sex VARCHAR(10),
-    Age INT,
-    Siblings INT,
-    Parents INT,
-    Fare REAL
+    Survived boolean,
+    Pclass int4,
+    Name text,
+    Sex text,
+    Age int4,
+    Siblings int4,
+    Parents int4,
+    Fare float8
 );
 '''
 curs.execute(query)

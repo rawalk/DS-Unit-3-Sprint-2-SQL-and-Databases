@@ -30,7 +30,6 @@ def get_statement(row):
     return base + str(tuple(row)) + ";"
 for row in df.values:
     query = get_statement(row)
-    #print(query)
     curs.execute(query)
 conn.commit()
 query = "SELECT COUNT(*) FROM titanic"

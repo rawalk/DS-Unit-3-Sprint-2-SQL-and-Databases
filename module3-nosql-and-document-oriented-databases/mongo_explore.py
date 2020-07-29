@@ -52,15 +52,15 @@ df = pd.read_csv (r'titanic.csv')
 df.to_json (r'titanic.json')
 
 # Read the JSON file (copied from: https://raw.githubusercontent.com/LambdaSchool/Django-RPG/master/testdata.json)
-with open('test_data_json.txt') as json_file:
-    rpg_data = json.load(json_file)
+with open('titanic.json') as json_file_1:
+    titanic_data = json.load(json_file_1)
 
 # Create an rpg_data database
-my_db = client.rpg_data
+my_db_1 = client.titanic_data
 
 # Create a characters collection in the rpg_data DB
-character_table = my_db.characters
+character_table_1 = my_db_1.characters
 
 # Insert the JSON data into characters collection
-character_table.insert_many(rpg_data)
-print(character_table.count_documents({}))
+character_table_1.insert_many(titanic_data)
+print(character_table_1.count_documents({}))
